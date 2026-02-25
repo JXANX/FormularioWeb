@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de proveedores</title>
+</head>
+
+<body>
+
+    <!-- titulos -->
+    <center>
+        <h1>Compras y manejo de proveedores</h1>
+        <h2>Registro de proveedores</h2>
+    </center>
+
+    <!-- si es nuevo o actualizacion -->
+    <fieldset>
+        <legend><b>Tipo de registro</b></legend>
+        <input type="radio" name="tipo_registro" value="inscripcion" id="inscripcion">
+        <label for="inscripcion">Inscripción</label>
+        <input type="radio" name="tipo_registro" value="actualizacion" id="actualizacion">
+        <label for="actualizacion">Actualización de datos</label>
+    </fieldset>
+    <br>
+
+    <form action="">
+
+        <!-- seccion 1 -->
+        <fieldset>
+            <legend><b>1. Información general del proveedor</b></legend>
+
+            <label for="razon_social">Razón social / nombre:</label><br>
+            <input type="text" id="razon_social" name="razon_social" size="60"><br><br>
+
+            <label for="nit">Nit / cc:</label>
+            <input type="text" id="nit" name="nit" size="20"><br><br>
+
+            <!-- tipo de persona -->
+            <label><b>Naturaleza jurídica:</b></label><br>
+            <input type="radio" name="naturaleza" value="natural" id="natural">
+            <label for="natural">Persona natural</label>
+            <input type="radio" name="naturaleza" value="juridica" id="juridica">
+            <label for="juridica">Persona jurídica</label><br><br>
+
+            <!-- tipo de empresa -->
+            <label><b>Tipo de sociedad (no aplica para persona natural):</b></label><br>
+            <input type="checkbox" name="tipo_sociedad" value="anonima" id="anonima">
+            <label for="anonima">Sociedad anónima</label>
+            <input type="checkbox" name="tipo_sociedad" value="limitada" id="limitada">
+            <label for="limitada">Sociedad limitada</label>
+            <input type="checkbox" name="tipo_sociedad" value="estatal" id="estatal">
+            <label for="estatal">Empresa estatal</label><br>
+            <input type="checkbox" name="tipo_sociedad" value="unipersonal" id="unipersonal">
+            <label for="unipersonal">Empresa unipersonal</label>
+            <input type="checkbox" name="tipo_sociedad" value="sas" id="sas">
+            <label for="sas">Sociedad por acciones simplificada</label><br>
+            <input type="checkbox" name="tipo_sociedad" value="extranjera" id="extranjera">
+            <label for="extranjera">Empresa extranjera</label>
+            <input type="checkbox" name="tipo_sociedad" value="otra" id="otra_tipo">
+            <label for="otra_tipo">Otra</label>
+            <label for="otra_sociedad">¿Cuál?</label>
+            <input type="text" id="otra_sociedad" name="otra_sociedad">
+        </fieldset>
+        <br>
+
+        <!-- donde queda la empresa -->
+        <fieldset>
+            <legend><b>Sede principal</b></legend>
+
+            <label for="direccion">Dirección:</label><br>
+            <input type="text" id="direccion" name="direccion" size="60"><br><br>
+
+            <!-- desplegables de ubicacion -->
+            <label for="ciudad">Ciudad / municipio:</label>
+            <select id="ciudad" name="ciudad">
+                <option value="">Seleccione...</option>
+                <option value="bogota">Bogotá</option>
+                <option value="medellin">Medellín</option>
+                <option value="cali">Cali</option>
+                <option value="barranquilla">Barranquilla</option>
+                <option value="cartagena">Cartagena</option>
+                <option value="cucuta">Cúcuta</option>
+                <option value="bucaramanga">Bucaramanga</option>
+                <option value="pereira">Pereira</option>
+                <option value="manizales">Manizales</option>
+                <option value="santa_marta">Santa Marta</option>
+                <option value="ibague">Ibagué</option>
+                <option value="villavicencio">Villavicencio</option>
+                <option value="pasto">Pasto</option>
+                <option value="monteria">Montería</option>
+                <option value="neiva">Neiva</option>
+                <option value="valledupar">Valledupar</option>
+                <option value="armenia">Armenia</option>
+                <option value="popayan">Popayán</option>
+                <option value="sincelejo">Sincelejo</option>
+                <option value="tunja">Tunja</option>
+            </select>
+
+            <label for="departamento">Departamento:</label>
+            <select id="departamento" name="departamento">
+                <option value="">Seleccione...</option>
+                <option value="amazonas">Amazonas</option>
+                <option value="antioquia">Antioquia</option>
+                <option value="arauca">Arauca</option>
+                <option value="atlantico">Atlántico</option>
+                <option value="bolivar">Bolívar</option>
+                <option value="boyaca">Boyacá</option>
+                <option value="caldas">Caldas</option>
+                <option value="caqueta">Caquetá</option>
+                <option value="casanare">Casanare</option>
+                <option value="cauca">Cauca</option>
+                <option value="cesar">Cesar</option>
+                <option value="choco">Chocó</option>
+                <option value="cordoba">Córdoba</option>
+                <option value="cundinamarca">Cundinamarca</option>
+                <option value="guainia">Guainía</option>
+                <option value="guaviare">Guaviare</option>
+                <option value="huila">Huila</option>
+                <option value="la_guajira">La Guajira</option>
+                <option value="magdalena">Magdalena</option>
+                <option value="meta">Meta</option>
+                <option value="narino">Nariño</option>
+                <option value="norte_santander">Norte de Santander</option>
+                <option value="putumayo">Putumayo</option>
+                <option value="quindio">Quindío</option>
+                <option value="risaralda">Risaralda</option>
+                <option value="san_andres">San Andrés y Providencia</option>
+                <option value="santander">Santander</option>
+                <option value="sucre">Sucre</option>
+                <option value="tolima">Tolima</option>
+                <option value="valle">Valle del Cauca</option>
+                <option value="vaupes">Vaupés</option>
+                <option value="vichada">Vichada</option>
+            </select>
+
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+                <option value="">Seleccione...</option>
+                <option value="colombia" selected>Colombia</option>
+                <option value="venezuela">Venezuela</option>
+                <option value="ecuador">Ecuador</option>
+                <option value="peru">Perú</option>
+                <option value="brasil">Brasil</option>
+                <option value="panama">Panamá</option>
+                <option value="mexico">México</option>
+                <option value="argentina">Argentina</option>
+                <option value="chile">Chile</option>
+                <option value="estados_unidos">Estados Unidos</option>
+            </select><br><br>
+
+            <label for="telefono">Teléfono principal:</label>
+            <input type="text" id="telefono" name="telefono">
+            <label for="celular">Celular:</label>
+            <input type="text" id="celular" name="celular"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <label for="pagina_web">Página web:</label>
+            <input type="text" id="pagina_web" name="pagina_web">
+        </fieldset>
+        <br>
+
+        <!-- seccion 2 -->
+        <fieldset>
+            <legend><b>2. Representante legal y personas contacto</b></legend>
+
+            <label for="representante">Representante legal:</label>
+            <input type="text" id="representante" name="representante" size="30">
+            <label for="doc_identidad">Documento de identidad:</label>
+            <input type="text" id="doc_identidad" name="doc_identidad"><br><br>
+
+            <label for="cargo_representante">Cargo:</label>
+            <select id="cargo_representante" name="cargo_representante">
+                <option value="">Seleccione...</option>
+                <option value="gerente">Gerente general</option>
+                <option value="director">Director ejecutivo</option>
+                <option value="presidente">Presidente</option>
+                <option value="representante_legal">Representante legal</option>
+                <option value="administrador">Administrador</option>
+                <option value="socio">Socio</option>
+                <option value="propietario">Propietario</option>
+                <option value="coordinador">Coordinador</option>
+                <option value="jefe_area">Jefe de área</option>
+                <option value="contador">Contador</option>
+                <option value="secretario">Secretario general</option>
+                <option value="otro_cargo">Otro</option>
+            </select>
+            <label for="tel_directo">Teléfono directo:</label>
+            <input type="text" id="tel_directo" name="tel_directo"><br><br>
+
+            <label for="celular_rep">Celular:</label>
+            <input type="text" id="celular_rep" name="celular_rep">
+            <label for="email_rep">Email:</label>
+            <input type="text" id="email_rep" name="email_rep"><br><br>
+
+            <!-- contacto del area comercial -->
+            <fieldset>
+                <legend>Contacto comercial</legend>
+                <label for="nombre_comercial">Nombre:</label>
+                <input type="text" id="nombre_comercial" name="nombre_comercial">
+                <label for="cargo_comercial">Cargo:</label>
+                <select id="cargo_comercial" name="cargo_comercial">
+                    <option value="">Seleccione...</option>
+                    <option value="director_comercial">Director comercial</option>
+                    <option value="asesor_comercial">Asesor comercial</option>
+                    <option value="ejecutivo_ventas">Ejecutivo de ventas</option>
+                    <option value="coordinador_comercial">Coordinador comercial</option>
+                    <option value="gerente_comercial">Gerente comercial</option>
+                    <option value="otro">Otro</option>
+                </select><br><br>
+                <label for="tel_comercial">Teléfono:</label>
+                <input type="text" id="tel_comercial" name="tel_comercial">
+                <label for="email_comercial">Email:</label>
+                <input type="text" id="email_comercial" name="email_comercial">
+            </fieldset>
+            <br>
+
+            <!-- contacto del area tecnica -->
+            <fieldset>
+                <legend>Contacto técnico</legend>
+                <label for="nombre_tecnico">Nombre:</label>
+                <input type="text" id="nombre_tecnico" name="nombre_tecnico">
+                <label for="cargo_tecnico">Cargo:</label>
+                <select id="cargo_tecnico" name="cargo_tecnico">
+                    <option value="">Seleccione...</option>
+                    <option value="director_tecnico">Director técnico</option>
+                    <option value="ingeniero">Ingeniero</option>
+                    <option value="tecnico">Técnico</option>
+                    <option value="coordinador_tecnico">Coordinador técnico</option>
+                    <option value="jefe_tecnico">Jefe técnico</option>
+                    <option value="otro">Otro</option>
+                </select><br><br>
+                <label for="tel_tecnico">Teléfono:</label>
+                <input type="text" id="tel_tecnico" name="tel_tecnico">
+                <label for="email_tecnico">Email:</label>
+                <input type="text" id="email_tecnico" name="email_tecnico">
+            </fieldset>
+        </fieldset>
+        <br>
+
+        <!-- seccion 3 -->
+        <fieldset>
+            <legend><b>3. Información tributaria</b></legend>
+
+            <label>Gran contribuyente:</label>
+            <input type="radio" name="gran_contribuyente" value="si" id="gc_si">
+            <label for="gc_si">Sí</label>
+            <input type="radio" name="gran_contribuyente" value="no" id="gc_no">
+            <label for="gc_no">No</label>
+            &nbsp;&nbsp;&nbsp;
+            <label>Responsable de iva:</label>
+            <input type="radio" name="responsable_iva" value="si" id="iva_si">
+            <label for="iva_si">Sí</label>
+            <input type="radio" name="responsable_iva" value="no" id="iva_no">
+            <label for="iva_no">No</label><br><br>
+
+            <label>Autorretenedor:</label>
+            <input type="radio" name="autorretenedor" value="si" id="auto_si">
+            <label for="auto_si">Sí</label>
+            <input type="radio" name="autorretenedor" value="no" id="auto_no">
+            <label for="auto_no">No</label>
+            &nbsp;&nbsp;&nbsp;
+            <label>Declarante de renta:</label>
+            <input type="radio" name="declarante_renta" value="si" id="renta_si">
+            <label for="renta_si">Sí</label>
+            <input type="radio" name="declarante_renta" value="no" id="renta_no">
+            <label for="renta_no">No</label><br><br>
+
+            <!-- que hace la empresa -->
+            <label for="actividad_principal">Actividad principal:</label>
+            <select id="actividad_principal" name="actividad_principal">
+                <option value="">Seleccione...</option>
+                <option value="construccion">Construcción</option>
+                <option value="comercio">Comercio al por mayor y menor</option>
+                <option value="manufactura">Manufactura</option>
+                <option value="transporte">Transporte y almacenamiento</option>
+                <option value="tecnologia">Tecnología e informática</option>
+                <option value="consultoria">Consultoría</option>
+                <option value="educacion">Educación</option>
+                <option value="salud">Salud</option>
+                <option value="alimentos">Alimentos y bebidas</option>
+                <option value="textil">Textil y confecciones</option>
+                <option value="servicios_profesionales">Servicios profesionales</option>
+                <option value="inmobiliaria">Actividades inmobiliarias</option>
+                <option value="agricultura">Agricultura y ganadería</option>
+                <option value="mineria">Minería</option>
+                <option value="financiera">Actividades financieras</option>
+                <option value="publicidad">Publicidad y mercadeo</option>
+                <option value="limpieza">Aseo y limpieza</option>
+                <option value="seguridad">Seguridad y vigilancia</option>
+                <option value="otra">Otra</option>
+            </select>
+            <label for="otras_actividades">Otras:</label>
+            <input type="text" id="otras_actividades" name="otras_actividades">
+        </fieldset>
+        <br>
+
+        <!-- seccion 4 -->
+        <fieldset>
+            <legend><b>4. Referencias comerciales (aplica persona jurídica)</b></legend>
+
+            <fieldset>
+                <legend>Referencia 1</legend>
+                <label for="ref1_razon">Razón social / nombre:</label>
+                <input type="text" id="ref1_razon" name="ref1_razon" size="30">
+                <label for="ref1_nit">Nit / cc:</label>
+                <input type="text" id="ref1_nit" name="ref1_nit"><br><br>
+                <label for="ref1_contacto">Contacto:</label>
+                <input type="text" id="ref1_contacto" name="ref1_contacto">
+                <label for="ref1_dir">Dirección:</label>
+                <input type="text" id="ref1_dir" name="ref1_dir"><br><br>
+                <label for="ref1_tel">Teléfono:</label>
+                <input type="text" id="ref1_tel" name="ref1_tel">
+                <label for="ref1_cel">Celular:</label>
+                <input type="text" id="ref1_cel" name="ref1_cel">
+                <label for="ref1_email">Email:</label>
+                <input type="text" id="ref1_email" name="ref1_email">
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>Referencia 2</legend>
+                <label for="ref2_razon">Razón social / nombre:</label>
+                <input type="text" id="ref2_razon" name="ref2_razon" size="30">
+                <label for="ref2_nit">Nit / cc:</label>
+                <input type="text" id="ref2_nit" name="ref2_nit"><br><br>
+                <label for="ref2_contacto">Contacto:</label>
+                <input type="text" id="ref2_contacto" name="ref2_contacto">
+                <label for="ref2_dir">Dirección:</label>
+                <input type="text" id="ref2_dir" name="ref2_dir"><br><br>
+                <label for="ref2_tel">Teléfono:</label>
+                <input type="text" id="ref2_tel" name="ref2_tel">
+                <label for="ref2_cel">Celular:</label>
+                <input type="text" id="ref2_cel" name="ref2_cel">
+                <label for="ref2_email">Email:</label>
+                <input type="text" id="ref2_email" name="ref2_email">
+            </fieldset>
+        </fieldset>
+        <br>
+
+        <!-- seccion 5 -->
+        <fieldset>
+            <legend><b>5. Referencia personal (aplica persona natural)</b></legend>
+            <label for="ref_personal_razon">Razón social / nombre:</label>
+            <input type="text" id="ref_personal_razon" name="ref_personal_razon" size="30">
+            <label for="ref_personal_nit">Nit / cc:</label>
+            <input type="text" id="ref_personal_nit" name="ref_personal_nit"><br><br>
+            <label for="ref_personal_contacto">Contacto:</label>
+            <input type="text" id="ref_personal_contacto" name="ref_personal_contacto">
+            <label for="ref_personal_dir">Dirección:</label>
+            <input type="text" id="ref_personal_dir" name="ref_personal_dir"><br><br>
+            <label for="ref_personal_tel">Teléfono:</label>
+            <input type="text" id="ref_personal_tel" name="ref_personal_tel">
+            <label for="ref_personal_cel">Celular:</label>
+            <input type="text" id="ref_personal_cel" name="ref_personal_cel">
+            <label for="ref_personal_email">Email:</label>
+            <input type="text" id="ref_personal_email" name="ref_personal_email">
+        </fieldset>
+        <br>
+
+        <!-- seccion 6 -->
+        <fieldset>
+            <legend><b>6. Uso de datos personales</b></legend>
+            <p>
+                Con base en la Ley 1581 de 2012 y el Decreto 1377 de 2013, la Escuela de Artes y Oficios
+                Santo Domingo (EAOSD) le informa que los datos personales que usted proporcione en este
+                formulario serán utilizados únicamente para gestionar su registro como proveedor.
+                Esta información será almacenada de forma segura en nuestras bases de datos y no será
+                compartida con terceros sin su autorización previa. La EAOSD se compromete a proteger
+                su información personal y a darle un uso responsable, conforme a la ley.
+            </p>
+            <p>
+                Usted tiene derecho a conocer, actualizar, corregir o eliminar sus datos personales
+                en cualquier momento. Para ejercer estos derechos, puede enviar una solicitud por
+                escrito al correo <strong>misdatos@eaosd.org</strong>. Si no desea que la EAOSD
+                utilice sus datos, también puede revocar esta autorización a través del mismo correo.
+            </p>
+
+            <input type="checkbox" id="acepto" name="acepto">
+            <label for="acepto">He leído y acepto la política de uso de datos personales.</label>
+        </fieldset>
+        <br>
+
+        <!-- boton para enviar -->
+        <center>
+            <input type="submit" value="Enviar registro">
+        </center>
+        <br>
+
+    </form>
+
+</body>
+
+</html>
