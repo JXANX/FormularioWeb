@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seccion3</title>
+</head>
+<body>
+   <fieldset>
+            <legend><b>3. Información tributaria</b></legend>
+
+            <label>Gran contribuyente:</label>
+            <input type="radio" name="gran_contribuyente" value="si" id="gc_si">
+            <label for="gc_si">Sí</label>
+            <input type="radio" name="gran_contribuyente" value="no" id="gc_no">
+            <label for="gc_no">No</label>
+            &nbsp;&nbsp;&nbsp;
+            <label>Responsable de iva:</label>
+            <input type="radio" name="responsable_iva" value="si" id="iva_si">
+            <label for="iva_si">Sí</label>
+            <input type="radio" name="responsable_iva" value="no" id="iva_no">
+            <label for="iva_no">No</label><br><br>
+
+            <label>Autorretenedor:</label>
+            <input type="radio" name="autorretenedor" value="si" id="auto_si">
+            <label for="auto_si">Sí</label>
+            <input type="radio" name="autorretenedor" value="no" id="auto_no">
+            <label for="auto_no">No</label>
+            &nbsp;&nbsp;&nbsp;
+            <label>Declarante de renta:</label>
+            <input type="radio" name="declarante_renta" value="si" id="renta_si">
+            <label for="renta_si">Sí</label>
+            <input type="radio" name="declarante_renta" value="no" id="renta_no">
+            <label for="renta_no">No</label><br><br>
+
+            <!-- que hace la empresa -->
+            <label for="actividad_principal">Actividad principal:</label>
+            <select id="actividad_principal" name="actividad_principal">
+                <option value="">Seleccione...</option>
+                <option value="construccion">Construcción</option>
+                <option value="comercio">Comercio al por mayor y menor</option>
+                <option value="manufactura">Manufactura</option>
+                <option value="transporte">Transporte y almacenamiento</option>
+                <option value="tecnologia">Tecnología e informática</option>
+                <option value="consultoria">Consultoría</option>
+                <option value="educacion">Educación</option>
+                <option value="salud">Salud</option>
+                <option value="alimentos">Alimentos y bebidas</option>
+                <option value="textil">Textil y confecciones</option>
+                <option value="servicios_profesionales">Servicios profesionales</option>
+                <option value="inmobiliaria">Actividades inmobiliarias</option>
+                <option value="agricultura">Agricultura y ganadería</option>
+                <option value="mineria">Minería</option>
+                <option value="financiera">Actividades financieras</option>
+                <option value="publicidad">Publicidad y mercadeo</option>
+                <option value="limpieza">Aseo y limpieza</option>
+                <option value="seguridad">Seguridad y vigilancia</option>
+                <option value="otra">Otra</option>
+            </select>
+            <label for="otras_actividades">Otras:</label>
+            <input type="text" id="otras_actividades" name="otras_actividades">
+        </fieldset>
+        
+        <br>
+
+        <a href="seccion2.html"><button type="button"onclick>Anterior</button></a>
+        <br><br>
+        <a href="seccion4.html"><button type="button"onclick>Siguiente</button></a>
+        
+</body>
+</html>

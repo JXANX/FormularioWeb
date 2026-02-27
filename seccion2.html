@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seccion2</title>
+</head>
+<body>
+    <fieldset>
+            <legend><b>2. Representante legal y personas contacto</b></legend>
+
+            <label for="representante">Representante legal:</label>
+            <input type="text" id="representante" name="representante" size="30">
+            <label for="doc_identidad">Documento de identidad:</label>
+            <input type="text" id="doc_identidad" name="doc_identidad"><br><br>
+
+            <label for="cargo_representante">Cargo:</label>
+            <select id="cargo_representante" name="cargo_representante">
+                <option value="">Seleccione...</option>
+                <option value="gerente">Gerente general</option>
+                <option value="director">Director ejecutivo</option>
+                <option value="presidente">Presidente</option>
+                <option value="representante_legal">Representante legal</option>
+                <option value="administrador">Administrador</option>
+                <option value="socio">Socio</option>
+                <option value="propietario">Propietario</option>
+                <option value="coordinador">Coordinador</option>
+                <option value="jefe_area">Jefe de área</option>
+                <option value="contador">Contador</option>
+                <option value="secretario">Secretario general</option>
+                <option value="otro_cargo">Otro</option>
+            </select>
+            <label for="tel_directo">Teléfono directo:</label>
+            <input type="text" id="tel_directo" name="tel_directo"><br><br>
+
+            <label for="celular_rep">Celular:</label>
+            <input type="text" id="celular_rep" name="celular_rep">
+            <label for="email_rep">Email:</label>
+            <input type="text" id="email_rep" name="email_rep"><br><br>
+
+            <!-- contacto del area comercial -->
+            <fieldset>
+                <legend>Contacto comercial</legend>
+                <label for="nombre_comercial">Nombre:</label>
+                <input type="text" id="nombre_comercial" name="nombre_comercial">
+                <label for="cargo_comercial">Cargo:</label>
+                <select id="cargo_comercial" name="cargo_comercial">
+                    <option value="">Seleccione...</option>
+                    <option value="director_comercial">Director comercial</option>
+                    <option value="asesor_comercial">Asesor comercial</option>
+                    <option value="ejecutivo_ventas">Ejecutivo de ventas</option>
+                    <option value="coordinador_comercial">Coordinador comercial</option>
+                    <option value="gerente_comercial">Gerente comercial</option>
+                    <option value="otro">Otro</option>
+                </select><br><br>
+                <label for="tel_comercial">Teléfono:</label>
+                <input type="text" id="tel_comercial" name="tel_comercial">
+                <label for="email_comercial">Email:</label>
+                <input type="text" id="email_comercial" name="email_comercial">
+            </fieldset>
+            <br>
+
+            <!-- contacto del area tecnica -->
+            <fieldset>
+                <legend>Contacto técnico</legend>
+                <label for="nombre_tecnico">Nombre:</label>
+                <input type="text" id="nombre_tecnico" name="nombre_tecnico">
+                <label for="cargo_tecnico">Cargo:</label>
+                <select id="cargo_tecnico" name="cargo_tecnico">
+                    <option value="">Seleccione...</option>
+                    <option value="director_tecnico">Director técnico</option>
+                    <option value="ingeniero">Ingeniero</option>
+                    <option value="tecnico">Técnico</option>
+                    <option value="coordinador_tecnico">Coordinador técnico</option>
+                    <option value="jefe_tecnico">Jefe técnico</option>
+                    <option value="otro">Otro</option>
+                </select><br><br>
+                <label for="tel_tecnico">Teléfono:</label>
+                <input type="text" id="tel_tecnico" name="tel_tecnico">
+                <label for="email_tecnico">Email:</label>
+                <input type="text" id="email_tecnico" name="email_tecnico">
+            </fieldset>
+        </fieldset>
+
+        <br>
+
+        <a href="index.html"><button type="button"onclick>Anterior</button></a>
+        <br><br>
+        <a href="seccion3.html"><button type="button"onclick>Siguiente</button></a>
+        
+</body>
+</html>
